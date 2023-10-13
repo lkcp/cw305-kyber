@@ -1,0 +1,25 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../cw305_kyber.srcs/sources_1/ip/c_shift_ram_11/sim/c_shift_ram_11.vhd" \
+"../../../../cw305_kyber.srcs/sources_1/ip/c_shift_ram_8/sim/c_shift_ram_8.vhd" \
+"../../../../cw305_kyber.srcs/sources_1/ip/c_shift_ram_6/sim/c_shift_ram_6.vhd" \
+"../../../../cw305_kyber.srcs/sources_1/ip/c_shift_ram_5/sim/c_shift_ram_5.vhd" \
+"../../../../cw305_kyber.srcs/sources_1/ip/c_shift_ram_4/sim/c_shift_ram_4.vhd" \
+"../../../../cw305_kyber.srcs/sources_1/ip/c_shift_ram_3/sim/c_shift_ram_3.vhd" \
+"../../../../cw305_kyber.srcs/sources_1/ip/c_shift_ram_2/sim/c_shift_ram_2.vhd" \
+"../../../../cw305_kyber.srcs/sources_1/ip/c_shift_ram_9/sim/c_shift_ram_9.vhd" \
+"../../../../cw305_kyber.srcs/sources_1/ip/c_shift_ram_1/sim/c_shift_ram_1.vhd" \
+"../../../../cw305_kyber.srcs/sources_1/ip/c_shift_ram_0/sim/c_shift_ram_0.vhd" \
+"../../../../cw305_kyber.srcs/sources_1/ip/mult_gen_0/sim/mult_gen_0.vhd" \
+"E:/CW305_KYBER/src/kyber/Keccak1600.vhd" \
+"E:/CW305_KYBER/src/kyber/RegisterFDRE.vhd" \
+"E:/CW305_KYBER/src/kyber/Round.vhd" \
+"E:/CW305_KYBER/src/kyber/StateMachine.vhd" \
+"E:/CW305_KYBER/src/kyber/chi.vhd" \
+"E:/CW305_KYBER/src/kyber/iota.vhd" \
+"E:/CW305_KYBER/src/kyber/pi.vhd" \
+"E:/CW305_KYBER/src/kyber/rho.vhd" \
+"E:/CW305_KYBER/src/kyber/theta.vhd" \
+
+# Do not sort compile order
+nosort

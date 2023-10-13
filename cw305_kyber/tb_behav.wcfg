@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="81146134fs"></ZoomStartTime>
+      <ZoomEndTime time="81259335fs"></ZoomEndTime>
+      <Cursor1Time time="81165000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="248"></NameColumnWidth>
+      <ValueColumnWidth column_width="81"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="20" />
+   <wvobject fp_name="/tb/uut/kw/ks/hash/keccak_din" type="array">
+      <obj_property name="ElementShortName">keccak_din[31:0]</obj_property>
+      <obj_property name="ObjectShortName">keccak_din[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/kw/ks/NTT_din" type="array">
+      <obj_property name="ElementShortName">NTT_din[24:0]</obj_property>
+      <obj_property name="ObjectShortName">NTT_din[24:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/kw/ks/NTT_dout" type="array">
+      <obj_property name="ElementShortName">NTT_dout[23:0]</obj_property>
+      <obj_property name="ObjectShortName">NTT_dout[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/kw/ks/ntt/state" type="array">
+      <obj_property name="ElementShortName">state[5:0]</obj_property>
+      <obj_property name="ObjectShortName">state[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/kw/ks/CCA_enc" type="logic">
+      <obj_property name="ElementShortName">CCA_enc</obj_property>
+      <obj_property name="ObjectShortName">CCA_enc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/kw/ks/ntt/quo0_butt" type="array">
+      <obj_property name="ElementShortName">quo0_butt[10:0]</obj_property>
+      <obj_property name="ObjectShortName">quo0_butt[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/kw/ks/ntt/quo1_butt" type="array">
+      <obj_property name="ElementShortName">quo1_butt[10:0]</obj_property>
+      <obj_property name="ObjectShortName">quo1_butt[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/kw/ks/ntt/m_dec" type="array">
+      <obj_property name="ElementShortName">m_dec[1:0]</obj_property>
+      <obj_property name="ObjectShortName">m_dec[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/kw/ks/ntt/rdata_RAM0" type="array">
+      <obj_property name="ElementShortName">rdata_RAM0[23:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata_RAM0[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/kw/ks/ntt/rdata_RAM1" type="array">
+      <obj_property name="ElementShortName">rdata_RAM1[23:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata_RAM1[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/kw/ks/ntt/raddr_RAM0" type="array">
+      <obj_property name="ElementShortName">raddr_RAM0[7:0]</obj_property>
+      <obj_property name="ObjectShortName">raddr_RAM0[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/kw/ks/ntt/raddr_RAM1" type="array">
+      <obj_property name="ElementShortName">raddr_RAM1[5:0]</obj_property>
+      <obj_property name="ObjectShortName">raddr_RAM1[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/kw/ks/ntt/in0_butt" type="array">
+      <obj_property name="ElementShortName">in0_butt[23:0]</obj_property>
+      <obj_property name="ObjectShortName">in0_butt[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/kw/ks/ntt/BU/tw_reg" type="array">
+      <obj_property name="ElementShortName">tw_reg[23:0]</obj_property>
+      <obj_property name="ObjectShortName">tw_reg[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/kw/ks/ntt/rdata_RAM_mux0" type="array">
+      <obj_property name="ElementShortName">rdata_RAM_mux0[23:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata_RAM_mux0[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/kw/ks/ntt/rdata_RAM_mux1" type="array">
+      <obj_property name="ElementShortName">rdata_RAM_mux1[23:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata_RAM_mux1[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/kw/ks/ntt/wen_RAM0" type="logic">
+      <obj_property name="ElementShortName">wen_RAM0</obj_property>
+      <obj_property name="ObjectShortName">wen_RAM0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/kw/ks/ntt/rdata_ROMs0" type="array">
+      <obj_property name="ElementShortName">rdata_ROMs0[23:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata_ROMs0[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/kw/ks/ntt/rdata_ROMs1" type="array">
+      <obj_property name="ElementShortName">rdata_ROMs1[23:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata_ROMs1[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/kw/dout" type="array">
+      <obj_property name="ElementShortName">dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[31:0]</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,1495 @@
+
+*** Running vivado
+    with args -log cw305_ecc_p256_pmul_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source cw305_ecc_p256_pmul_top.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source cw305_ecc_p256_pmul_top.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/CW305_KYBER'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'G:/vivoda20/Vivado/2019.2/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:Kyber_Server:1.0'. The one found in IP location 'e:/CW305_KYBER/CW305_KYBER/CW305_KYBER.srcs/sources_1/imports/CW305_KYBER' will take precedence over the same IP in location e:/CW305_KYBER
+Command: synth_design -top cw305_ecc_p256_pmul_top -part xc7a100tftg256-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tftg256-2
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 23660 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 807.781 ; gain = 235.707
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'cw305_ecc_p256_pmul_top' [G:/CW305_KYBER/src/cw305/cw305_ecc_p256_pmul_top.v:32]
+	Parameter pBYTECNT_SIZE bound to: 10 - type: integer 
+	Parameter pADDR_WIDTH bound to: 21 - type: integer 
+	Parameter pPT_WIDTH bound to: 256 - type: integer 
+	Parameter pCT_WIDTH bound to: 256 - type: integer 
+	Parameter pKEY_WIDTH bound to: 6144 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'cw305_usb_reg_fe' [G:/CW305_KYBER/src/cw305/cw305_usb_reg_fe.v:31]
+	Parameter pADDR_WIDTH bound to: 21 - type: integer 
+	Parameter pBYTECNT_SIZE bound to: 10 - type: integer 
+	Parameter pREG_RDDLY_LEN bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cw305_usb_reg_fe' (1#1) [G:/CW305_KYBER/src/cw305/cw305_usb_reg_fe.v:31]
+INFO: [Synth 8-6157] synthesizing module 'cw305_reg_pmul' [G:/CW305_KYBER/src/cw305/cw305_reg_pmul.v:33]
+	Parameter pADDR_WIDTH bound to: 21 - type: integer 
+	Parameter pBYTECNT_SIZE bound to: 10 - type: integer 
+	Parameter pDONE_EDGE_SENSITIVE bound to: 1 - type: integer 
+	Parameter pCT_WIDTH bound to: 256 - type: integer 
+	Parameter pKEY_WIDTH bound to: 6144 - type: integer 
+	Parameter pCRYPT_TYPE bound to: 3 - type: integer 
+	Parameter pCRYPT_REV bound to: 1 - type: integer 
+	Parameter pIDENTIFY bound to: 8'b00101110 
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [G:/CW305_KYBER/src/cw305/cw305_reg_pmul.v:115]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [G:/CW305_KYBER/src/cw305/cw305_reg_pmul.v:116]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [G:/CW305_KYBER/src/cw305/cw305_reg_pmul.v:117]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [G:/CW305_KYBER/src/cw305/cw305_reg_pmul.v:118]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [G:/CW305_KYBER/src/cw305/cw305_reg_pmul.v:119]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [G:/CW305_KYBER/src/cw305/cw305_reg_pmul.v:120]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [G:/CW305_KYBER/src/cw305/cw305_reg_pmul.v:122]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [G:/CW305_KYBER/src/cw305/cw305_reg_pmul.v:123]
+INFO: [Synth 8-155] case statement is not full and has no default [G:/CW305_KYBER/src/cw305/cw305_reg_pmul.v:207]
+INFO: [Synth 8-6157] synthesizing module 'cdc_pulse' [G:/CW305_KYBER/src/cw305/cdc_pulse.v:24]
+	Parameter pSYNC_STAGES bound to: 2 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [G:/CW305_KYBER/src/cw305/cdc_pulse.v:34]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [G:/CW305_KYBER/src/cw305/cdc_pulse.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'cdc_pulse' (2#1) [G:/CW305_KYBER/src/cw305/cdc_pulse.v:24]
+INFO: [Synth 8-6157] synthesizing module 'USR_ACCESSE2' [G:/vivoda20/Vivado/2019.2/scripts/rt/data/unisim_comp.v:81610]
+INFO: [Synth 8-6155] done synthesizing module 'USR_ACCESSE2' (3#1) [G:/vivoda20/Vivado/2019.2/scripts/rt/data/unisim_comp.v:81610]
+WARNING: [Synth 8-6014] Unused sequential element done_r_reg was removed.  [G:/CW305_KYBER/src/cw305/cw305_reg_pmul.v:127]
+INFO: [Synth 8-6155] done synthesizing module 'cw305_reg_pmul' (4#1) [G:/CW305_KYBER/src/cw305/cw305_reg_pmul.v:33]
+WARNING: [Synth 8-7023] instance 'U_reg_pmul' of module 'cw305_reg_pmul' has 38 connections declared, but only 37 given [G:/CW305_KYBER/src/cw305/cw305_ecc_p256_pmul_top.v:168]
+INFO: [Synth 8-6157] synthesizing module 'clocks' [G:/CW305_KYBER/src/cw305/clocks.v:32]
+INFO: [Synth 8-6157] synthesizing module 'BUFGMUX_CTRL' [G:/vivoda20/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1203]
+INFO: [Synth 8-6155] done synthesizing module 'BUFGMUX_CTRL' (5#1) [G:/vivoda20/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1203]
+INFO: [Synth 8-6157] synthesizing module 'ODDR' [G:/vivoda20/Vivado/2019.2/scripts/rt/data/unisim_comp.v:49681]
+	Parameter DDR_CLK_EDGE bound to: OPPOSITE_EDGE - type: string 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'ODDR' (6#1) [G:/vivoda20/Vivado/2019.2/scripts/rt/data/unisim_comp.v:49681]
+INFO: [Synth 8-6157] synthesizing module 'IBUFG' [G:/vivoda20/Vivado/2019.2/scripts/rt/data/unisim_comp.v:33402]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IBUFG' (7#1) [G:/vivoda20/Vivado/2019.2/scripts/rt/data/unisim_comp.v:33402]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [G:/vivoda20/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1075]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (8#1) [G:/vivoda20/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1075]
+INFO: [Synth 8-6155] done synthesizing module 'clocks' (9#1) [G:/CW305_KYBER/src/cw305/clocks.v:32]
+INFO: [Synth 8-6157] synthesizing module 'Kyber_Wrapper' [G:/CW305_KYBER/src/kyber/kyber_Wrapper.v:1]
+	Parameter pPT_WIDTH bound to: 6144 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Kyber_Server' [E:/CW305_KYBER/src/kyber/Kyber_Server.v:2]
+INFO: [Synth 8-6157] synthesizing module 'NTT_core_Server' [E:/CW305_KYBER/src/kyber/NTT_core_Server.v:2]
+WARNING: [Synth 8-151] case item 6'b011000 is unreachable [E:/CW305_KYBER/src/kyber/NTT_core_Server.v:438]
+WARNING: [Synth 8-151] case item 6'b011001 is unreachable [E:/CW305_KYBER/src/kyber/NTT_core_Server.v:438]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/CW305_KYBER/src/kyber/NTT_core_Server.v:568]
+INFO: [Synth 8-6157] synthesizing module 'butterfly_Ser' [E:/CW305_KYBER/src/kyber/butterfly_Server.v:2]
+INFO: [Synth 8-6157] synthesizing module 'mult_gen_0' [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/mult_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mult_gen_0' (10#1) [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/mult_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'reduc' [E:/CW305_KYBER/src/kyber/reduc.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'reduc' (11#1) [E:/CW305_KYBER/src/kyber/reduc.v:2]
+INFO: [Synth 8-6157] synthesizing module 'c_shift_ram_0' [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/c_shift_ram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'c_shift_ram_0' (12#1) [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/c_shift_ram_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'c_shift_ram_1' [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/c_shift_ram_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'c_shift_ram_1' (13#1) [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/c_shift_ram_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'c_shift_ram_9' [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/c_shift_ram_9_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'c_shift_ram_9' (14#1) [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/c_shift_ram_9_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'butterfly_Ser' (15#1) [E:/CW305_KYBER/src/kyber/butterfly_Server.v:2]
+INFO: [Synth 8-6157] synthesizing module 'dist_mem_gen_5' [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/dist_mem_gen_5_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dist_mem_gen_5' (16#1) [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/dist_mem_gen_5_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'dist_mem_gen_6' [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/dist_mem_gen_6_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dist_mem_gen_6' (17#1) [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/dist_mem_gen_6_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'dist_mem_gen_7' [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/dist_mem_gen_7_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dist_mem_gen_7' (18#1) [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/dist_mem_gen_7_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'dist_mem_gen_1' [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/dist_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dist_mem_gen_1' (19#1) [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/dist_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'dist_mem_gen_2' [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/dist_mem_gen_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dist_mem_gen_2' (20#1) [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/dist_mem_gen_2_stub.v:6]
+WARNING: [Synth 8-689] width (24) of port connection 'qspo' does not match port width (48) of module 'dist_mem_gen_2' [E:/CW305_KYBER/src/kyber/NTT_core_Server.v:653]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (21#1) [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_3' [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/blk_mem_gen_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_3' (22#1) [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/blk_mem_gen_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_2' [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/blk_mem_gen_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_2' (23#1) [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/blk_mem_gen_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (24#1) [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'mux4to2' [E:/CW305_KYBER/src/kyber/mux4to2.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux4to2' (25#1) [E:/CW305_KYBER/src/kyber/mux4to2.v:1]
+INFO: [Synth 8-6157] synthesizing module 'c_shift_ram_2' [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/c_shift_ram_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'c_shift_ram_2' (26#1) [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/c_shift_ram_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'c_shift_ram_3' [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/c_shift_ram_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'c_shift_ram_3' (27#1) [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/c_shift_ram_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'c_shift_ram_4' [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/c_shift_ram_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'c_shift_ram_4' (28#1) [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/c_shift_ram_4_stub.v:6]
+WARNING: [Synth 8-689] width (6) of port connection 'Q' does not match port width (8) of module 'c_shift_ram_4' [E:/CW305_KYBER/src/kyber/NTT_core_Server.v:674]
+INFO: [Synth 8-6157] synthesizing module 'c_shift_ram_5' [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/c_shift_ram_5_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'c_shift_ram_5' (29#1) [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/c_shift_ram_5_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'c_shift_ram_6' [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/c_shift_ram_6_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'c_shift_ram_6' (30#1) [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/c_shift_ram_6_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'c_shift_ram_8' [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/c_shift_ram_8_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'c_shift_ram_8' (31#1) [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/c_shift_ram_8_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'c_shift_ram_11' [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/c_shift_ram_11_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'c_shift_ram_11' (32#1) [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/c_shift_ram_11_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'NTT_core_Server' (33#1) [E:/CW305_KYBER/src/kyber/NTT_core_Server.v:2]
+INFO: [Synth 8-6157] synthesizing module 'hash_core_Server' [E:/CW305_KYBER/src/kyber/hash_core_Server.v:1]
+INFO: [Synth 8-638] synthesizing module 'Keccak1600' [E:/CW305_KYBER/src/kyber/Keccak1600.vhd:41]
+INFO: [Synth 8-3491] module 'Round' declared at 'E:/CW305_KYBER/src/kyber/Round.vhd:19' bound to instance 'RoundFunction' of component 'Round' [E:/CW305_KYBER/src/kyber/Keccak1600.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'Round' [E:/CW305_KYBER/src/kyber/Round.vhd:39]
+	Parameter SIZE bound to: 1600 - type: integer 
+INFO: [Synth 8-3491] module 'RegisterFDRE' declared at 'E:/CW305_KYBER/src/kyber/RegisterFDRE.vhd:18' bound to instance 'Reg' of component 'RegisterFDRE' [E:/CW305_KYBER/src/kyber/Round.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'RegisterFDRE' [E:/CW305_KYBER/src/kyber/RegisterFDRE.vhd:37]
+	Parameter SIZE bound to: 1600 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RegisterFDRE' (34#1) [E:/CW305_KYBER/src/kyber/RegisterFDRE.vhd:37]
+INFO: [Synth 8-3491] module 'theta' declared at 'E:/CW305_KYBER/src/kyber/theta.vhd:19' bound to instance 'T' of component 'theta' [E:/CW305_KYBER/src/kyber/Round.vhd:112]
+INFO: [Synth 8-638] synthesizing module 'theta' [E:/CW305_KYBER/src/kyber/theta.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'theta' (35#1) [E:/CW305_KYBER/src/kyber/theta.vhd:28]
+INFO: [Synth 8-3491] module 'rho' declared at 'E:/CW305_KYBER/src/kyber/rho.vhd:19' bound to instance 'R' of component 'rho' [E:/CW305_KYBER/src/kyber/Round.vhd:113]
+INFO: [Synth 8-638] synthesizing module 'rho' [E:/CW305_KYBER/src/kyber/rho.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'rho' (36#1) [E:/CW305_KYBER/src/kyber/rho.vhd:28]
+INFO: [Synth 8-3491] module 'pi' declared at 'E:/CW305_KYBER/src/kyber/pi.vhd:19' bound to instance 'P' of component 'pi' [E:/CW305_KYBER/src/kyber/Round.vhd:114]
+INFO: [Synth 8-638] synthesizing module 'pi' [E:/CW305_KYBER/src/kyber/pi.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'pi' (37#1) [E:/CW305_KYBER/src/kyber/pi.vhd:28]
+INFO: [Synth 8-3491] module 'chi' declared at 'E:/CW305_KYBER/src/kyber/chi.vhd:19' bound to instance 'C' of component 'chi' [E:/CW305_KYBER/src/kyber/Round.vhd:115]
+INFO: [Synth 8-638] synthesizing module 'chi' [E:/CW305_KYBER/src/kyber/chi.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'chi' (38#1) [E:/CW305_KYBER/src/kyber/chi.vhd:28]
+INFO: [Synth 8-3491] module 'iota' declared at 'E:/CW305_KYBER/src/kyber/iota.vhd:19' bound to instance 'I' of component 'iota' [E:/CW305_KYBER/src/kyber/Round.vhd:116]
+INFO: [Synth 8-638] synthesizing module 'iota' [E:/CW305_KYBER/src/kyber/iota.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'iota' (39#1) [E:/CW305_KYBER/src/kyber/iota.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'Round' (40#1) [E:/CW305_KYBER/src/kyber/Round.vhd:39]
+INFO: [Synth 8-3491] module 'StateMachine' declared at 'E:/CW305_KYBER/src/kyber/StateMachine.vhd:19' bound to instance 'FSM' of component 'StateMachine' [E:/CW305_KYBER/src/kyber/Keccak1600.vhd:102]
+INFO: [Synth 8-638] synthesizing module 'StateMachine' [E:/CW305_KYBER/src/kyber/StateMachine.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'StateMachine' (41#1) [E:/CW305_KYBER/src/kyber/StateMachine.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'Keccak1600' (42#1) [E:/CW305_KYBER/src/kyber/Keccak1600.vhd:41]
+INFO: [Synth 8-6157] synthesizing module 'fifo_generator_0' [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/fifo_generator_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_0' (43#1) [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/fifo_generator_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'fifo_generator_1' [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/fifo_generator_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_1' (44#1) [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/fifo_generator_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'fifo_generator_7' [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/fifo_generator_7_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_7' (45#1) [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/fifo_generator_7_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'fifo_generator_8' [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/fifo_generator_8_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_8' (46#1) [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/fifo_generator_8_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'decode_keccak' [E:/CW305_KYBER/src/kyber/decode_keccak.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'decode_keccak' (47#1) [E:/CW305_KYBER/src/kyber/decode_keccak.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'hash_core_Server' (48#1) [E:/CW305_KYBER/src/kyber/hash_core_Server.v:1]
+INFO: [Synth 8-6157] synthesizing module 'decode_Server' [E:/CW305_KYBER/src/kyber/decode_Server.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'decode_Server' (49#1) [E:/CW305_KYBER/src/kyber/decode_Server.v:2]
+INFO: [Synth 8-6157] synthesizing module 'encode_Server' [E:/CW305_KYBER/src/kyber/encode_Server.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'encode_Server' (50#1) [E:/CW305_KYBER/src/kyber/encode_Server.v:2]
+INFO: [Synth 8-6157] synthesizing module 'pattern' [E:/CW305_KYBER/src/kyber/pattern.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'pattern' (51#1) [E:/CW305_KYBER/src/kyber/pattern.v:1]
+INFO: [Synth 8-6157] synthesizing module 'fifo_generator_2' [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/fifo_generator_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_2' (52#1) [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/fifo_generator_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'fifo_generator_3' [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/fifo_generator_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_3' (53#1) [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/fifo_generator_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'fifo_generator_4' [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/fifo_generator_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_4' (54#1) [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/fifo_generator_4_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'fifo_generator_5' [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/fifo_generator_5_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_5' (55#1) [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/fifo_generator_5_stub.v:6]
+WARNING: [Synth 8-689] width (10) of port connection 'dout' does not match port width (18) of module 'fifo_generator_5' [E:/CW305_KYBER/src/kyber/Kyber_Server.v:728]
+INFO: [Synth 8-6157] synthesizing module 'dist_mem_gen_0' [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/dist_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dist_mem_gen_0' (56#1) [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/.Xil/Vivado-424-DESKTOP-QBOHV2U/realtime/dist_mem_gen_0_stub.v:6]
+WARNING: [Synth 8-3848] Net d in module/entity Kyber_Server does not have driver. [E:/CW305_KYBER/src/kyber/Kyber_Server.v:20]
+INFO: [Synth 8-6155] done synthesizing module 'Kyber_Server' (57#1) [E:/CW305_KYBER/src/kyber/Kyber_Server.v:2]
+WARNING: [Synth 8-7023] instance 'ks' of module 'Kyber_Server' has 12 connections declared, but only 10 given [G:/CW305_KYBER/src/kyber/kyber_Wrapper.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'Kyber_Wrapper' (58#1) [G:/CW305_KYBER/src/kyber/kyber_Wrapper.v:1]
+WARNING: [Synth 8-689] width (3) of port connection 'rx_addr' does not match port width (6) of module 'Kyber_Wrapper' [G:/CW305_KYBER/src/cw305/cw305_ecc_p256_pmul_top.v:286]
+WARNING: [Synth 8-3848] Net ry_word in module/entity cw305_ecc_p256_pmul_top does not have driver. [G:/CW305_KYBER/src/cw305/cw305_ecc_p256_pmul_top.v:142]
+WARNING: [Synth 8-3848] Net ry_addr in module/entity cw305_ecc_p256_pmul_top does not have driver. [G:/CW305_KYBER/src/cw305/cw305_ecc_p256_pmul_top.v:147]
+WARNING: [Synth 8-3848] Net ry_wren in module/entity cw305_ecc_p256_pmul_top does not have driver. [G:/CW305_KYBER/src/cw305/cw305_ecc_p256_pmul_top.v:151]
+WARNING: [Synth 8-3848] Net gx_addr in module/entity cw305_ecc_p256_pmul_top does not have driver. [G:/CW305_KYBER/src/cw305/cw305_ecc_p256_pmul_top.v:148]
+WARNING: [Synth 8-3848] Net gy_addr in module/entity cw305_ecc_p256_pmul_top does not have driver. [G:/CW305_KYBER/src/cw305/cw305_ecc_p256_pmul_top.v:149]
+WARNING: [Synth 8-3848] Net rx_word_B in module/entity cw305_ecc_p256_pmul_top does not have driver. [G:/CW305_KYBER/src/cw305/cw305_ecc_p256_pmul_top.v:159]
+WARNING: [Synth 8-3848] Net ry_word_B in module/entity cw305_ecc_p256_pmul_top does not have driver. [G:/CW305_KYBER/src/cw305/cw305_ecc_p256_pmul_top.v:160]
+INFO: [Synth 8-6155] done synthesizing module 'cw305_ecc_p256_pmul_top' (59#1) [G:/CW305_KYBER/src/cw305/cw305_ecc_p256_pmul_top.v:32]
+WARNING: [Synth 8-3331] design cw305_reg_pmul has unconnected port I_ready
+WARNING: [Synth 8-3331] design cw305_reg_pmul has unconnected port I_done
+WARNING: [Synth 8-3331] design cw305_usb_reg_fe has unconnected port usb_alen
+WARNING: [Synth 8-3331] design cw305_ecc_p256_pmul_top has unconnected port k15_sel
+WARNING: [Synth 8-3331] design cw305_ecc_p256_pmul_top has unconnected port l14_sel
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 944.301 ; gain = 372.227
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 944.301 ; gain = 372.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 944.301 ; gain = 372.227
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.640 . Memory (MB): peak = 944.301 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+WARNING: [Netlist 29-432] The IBUFG primitive 'U_clocks/clkibuf' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'kw/ks/ntt/RAM0'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'kw/ks/ntt/RAM0'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/c_shift_ram_9/c_shift_ram_9/c_shift_ram_0_in_context.xdc] for cell 'kw/ks/ntt/BU/S12'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/c_shift_ram_9/c_shift_ram_9/c_shift_ram_0_in_context.xdc] for cell 'kw/ks/ntt/BU/S12'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/c_shift_ram_9/c_shift_ram_9/c_shift_ram_0_in_context.xdc] for cell 'kw/ks/ntt/BU/S13'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/c_shift_ram_9/c_shift_ram_9/c_shift_ram_0_in_context.xdc] for cell 'kw/ks/ntt/BU/S13'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'kw/ks/hash/fifo0'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'kw/ks/hash/fifo0'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/fifo_generator_1/fifo_generator_1/fifo_generator_1_in_context.xdc] for cell 'kw/ks/hash/fifo1'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/fifo_generator_1/fifo_generator_1/fifo_generator_1_in_context.xdc] for cell 'kw/ks/hash/fifo1'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/fifo_generator_2/fifo_generator_2/fifo_generator_2_in_context.xdc] for cell 'kw/ks/IFIFO'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/fifo_generator_2/fifo_generator_2/fifo_generator_2_in_context.xdc] for cell 'kw/ks/IFIFO'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/fifo_generator_3/fifo_generator_3/fifo_generator_3_in_context.xdc] for cell 'kw/ks/OFIFO'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/fifo_generator_3/fifo_generator_3/fifo_generator_3_in_context.xdc] for cell 'kw/ks/OFIFO'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/fifo_generator_4/fifo_generator_4/fifo_generator_4_in_context.xdc] for cell 'kw/ks/DFIFO0'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/fifo_generator_4/fifo_generator_4/fifo_generator_4_in_context.xdc] for cell 'kw/ks/DFIFO0'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/fifo_generator_5/fifo_generator_5/fifo_generator_5_in_context.xdc] for cell 'kw/ks/DFIFO1'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/fifo_generator_5/fifo_generator_5/fifo_generator_5_in_context.xdc] for cell 'kw/ks/DFIFO1'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/fifo_generator_7/fifo_generator_7/fifo_generator_7_in_context.xdc] for cell 'kw/ks/hash/fifo2'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/fifo_generator_7/fifo_generator_7/fifo_generator_7_in_context.xdc] for cell 'kw/ks/hash/fifo2'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/fifo_generator_8/fifo_generator_8/fifo_generator_8_in_context.xdc] for cell 'kw/ks/hash/fifo8'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/fifo_generator_8/fifo_generator_8/fifo_generator_8_in_context.xdc] for cell 'kw/ks/hash/fifo8'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0/dist_mem_gen_0_in_context.xdc] for cell 'kw/ks/ROMt'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0/dist_mem_gen_0_in_context.xdc] for cell 'kw/ks/ROMt'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/dist_mem_gen_5/dist_mem_gen_5/dist_mem_gen_5_in_context.xdc] for cell 'kw/ks/ntt/ROM0'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/dist_mem_gen_5/dist_mem_gen_5/dist_mem_gen_5_in_context.xdc] for cell 'kw/ks/ntt/ROM0'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/dist_mem_gen_6/dist_mem_gen_6/dist_mem_gen_6_in_context.xdc] for cell 'kw/ks/ntt/ROM1'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/dist_mem_gen_6/dist_mem_gen_6/dist_mem_gen_6_in_context.xdc] for cell 'kw/ks/ntt/ROM1'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/dist_mem_gen_7/dist_mem_gen_7/dist_mem_gen_7_in_context.xdc] for cell 'kw/ks/ntt/ROM2'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/dist_mem_gen_7/dist_mem_gen_7/dist_mem_gen_7_in_context.xdc] for cell 'kw/ks/ntt/ROM2'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3/blk_mem_gen_3_in_context.xdc] for cell 'kw/ks/ntt/RAM1'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3/blk_mem_gen_3_in_context.xdc] for cell 'kw/ks/ntt/RAM1'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2/blk_mem_gen_2_in_context.xdc] for cell 'kw/ks/ntt/RAM2'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2/blk_mem_gen_2_in_context.xdc] for cell 'kw/ks/ntt/RAM2'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2/blk_mem_gen_2_in_context.xdc] for cell 'kw/ks/ntt/RAM3'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2/blk_mem_gen_2_in_context.xdc] for cell 'kw/ks/ntt/RAM3'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'kw/ks/ntt/RAM4'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'kw/ks/ntt/RAM4'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/c_shift_ram_2/c_shift_ram_2/c_shift_ram_2_in_context.xdc] for cell 'kw/ks/ntt/S3'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/c_shift_ram_2/c_shift_ram_2/c_shift_ram_2_in_context.xdc] for cell 'kw/ks/ntt/S3'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/c_shift_ram_3/c_shift_ram_3/c_shift_ram_3_in_context.xdc] for cell 'kw/ks/ntt/S4'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/c_shift_ram_3/c_shift_ram_3/c_shift_ram_3_in_context.xdc] for cell 'kw/ks/ntt/S4'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/c_shift_ram_4/c_shift_ram_4/c_shift_ram_4_in_context.xdc] for cell 'kw/ks/ntt/S5'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/c_shift_ram_4/c_shift_ram_4/c_shift_ram_4_in_context.xdc] for cell 'kw/ks/ntt/S5'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/c_shift_ram_4/c_shift_ram_4/c_shift_ram_4_in_context.xdc] for cell 'kw/ks/ntt/S6'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/c_shift_ram_4/c_shift_ram_4/c_shift_ram_4_in_context.xdc] for cell 'kw/ks/ntt/S6'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/c_shift_ram_5/c_shift_ram_5/c_shift_ram_5_in_context.xdc] for cell 'kw/ks/ntt/S7'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/c_shift_ram_5/c_shift_ram_5/c_shift_ram_5_in_context.xdc] for cell 'kw/ks/ntt/S7'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/c_shift_ram_6/c_shift_ram_6/c_shift_ram_6_in_context.xdc] for cell 'kw/ks/ntt/S9'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/c_shift_ram_6/c_shift_ram_6/c_shift_ram_6_in_context.xdc] for cell 'kw/ks/ntt/S9'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/c_shift_ram_8/c_shift_ram_8/c_shift_ram_8_in_context.xdc] for cell 'kw/ks/ntt/S10'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/c_shift_ram_8/c_shift_ram_8/c_shift_ram_8_in_context.xdc] for cell 'kw/ks/ntt/S10'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/c_shift_ram_11/c_shift_ram_11/c_shift_ram_11_in_context.xdc] for cell 'kw/ks/ntt/S11'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/c_shift_ram_11/c_shift_ram_11/c_shift_ram_11_in_context.xdc] for cell 'kw/ks/ntt/S11'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/c_shift_ram_0/c_shift_ram_0/c_shift_ram_0_in_context.xdc] for cell 'kw/ks/ntt/BU/S0'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/c_shift_ram_0/c_shift_ram_0/c_shift_ram_0_in_context.xdc] for cell 'kw/ks/ntt/BU/S0'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/c_shift_ram_0/c_shift_ram_0/c_shift_ram_0_in_context.xdc] for cell 'kw/ks/ntt/BU/S1'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/c_shift_ram_0/c_shift_ram_0/c_shift_ram_0_in_context.xdc] for cell 'kw/ks/ntt/BU/S1'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/c_shift_ram_1/c_shift_ram_1/c_shift_ram_1_in_context.xdc] for cell 'kw/ks/ntt/BU/S2'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/c_shift_ram_1/c_shift_ram_1/c_shift_ram_1_in_context.xdc] for cell 'kw/ks/ntt/BU/S2'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/c_shift_ram_1/c_shift_ram_1/c_shift_ram_1_in_context.xdc] for cell 'kw/ks/ntt/BU/S3'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/c_shift_ram_1/c_shift_ram_1/c_shift_ram_1_in_context.xdc] for cell 'kw/ks/ntt/BU/S3'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/mult_gen_0/mult_gen_0/mult_gen_0_in_context.xdc] for cell 'kw/ks/ntt/BU/M0'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/mult_gen_0/mult_gen_0/mult_gen_0_in_context.xdc] for cell 'kw/ks/ntt/BU/M0'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/mult_gen_0/mult_gen_0/mult_gen_0_in_context.xdc] for cell 'kw/ks/ntt/BU/M1'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/mult_gen_0/mult_gen_0/mult_gen_0_in_context.xdc] for cell 'kw/ks/ntt/BU/M1'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/dist_mem_gen_1/dist_mem_gen_1/dist_mem_gen_1_in_context.xdc] for cell 'kw/ks/ntt/ROMs0'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/dist_mem_gen_1/dist_mem_gen_1/dist_mem_gen_1_in_context.xdc] for cell 'kw/ks/ntt/ROMs0'
+Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/dist_mem_gen_2/dist_mem_gen_2/dist_mem_gen_2_in_context.xdc] for cell 'kw/ks/ntt/ROMs1'
+Finished Parsing XDC File [g:/CW305_KYBER/cw305_kyber/cw305_kyber.srcs/sources_1/ip/dist_mem_gen_2/dist_mem_gen_2/dist_mem_gen_2_in_context.xdc] for cell 'kw/ks/ntt/ROMs1'
+Parsing XDC File [G:/CW305_KYBER/src/cw305/cw305_main.xdc]
+Finished Parsing XDC File [G:/CW305_KYBER/src/cw305/cw305_main.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [G:/CW305_KYBER/src/cw305/cw305_main.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/cw305_ecc_p256_pmul_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/cw305_ecc_p256_pmul_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1363.180 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  BUFGMUX_CTRL => BUFGCTRL (inverted pins: S0): 1 instance 
+  IBUFG => IBUF: 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.297 . Memory (MB): peak = 1363.180 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'kw/ks/ntt/BU/M0' at clock pin 'CLK' is different from the actual clock period '20.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'kw/ks/ntt/BU/M1' at clock pin 'CLK' is different from the actual clock period '20.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1375.668 ; gain = 803.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tftg256-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1375.668 ; gain = 803.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for kw/ks/ntt/RAM0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/ntt/BU/S12. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/ntt/BU/S13. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/hash/fifo0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/hash/fifo1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/IFIFO. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/OFIFO. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/DFIFO0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/DFIFO1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/hash/fifo2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/hash/fifo8. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/ROMt. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/ntt/ROM0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/ntt/ROM1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/ntt/ROM2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/ntt/RAM1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/ntt/RAM2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/ntt/RAM3. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/ntt/RAM4. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/ntt/S3. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/ntt/S4. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/ntt/S5. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/ntt/S6. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/ntt/S7. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/ntt/S9. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/ntt/S10. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/ntt/S11. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/ntt/BU/S0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/ntt/BU/S1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/ntt/BU/S2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/ntt/BU/S3. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/ntt/BU/M0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/ntt/BU/M1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/ntt/ROMs0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for kw/ks/ntt/ROMs1. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1375.668 ; gain = 803.594
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "O_clksettings" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "O_user_led" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "O_bram_rd_msb" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "O_lfsr_rd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "O_lfsr_rd_bank" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rb_sel" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/CW305_KYBER/src/kyber/butterfly_Server.v:127]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/CW305_KYBER/src/kyber/butterfly_Server.v:127]
+INFO: [Synth 8-5544] ROM "q_sum0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "q_sum1" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "q_diff0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "q_diff1" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "ctr_k" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "ctrl_butt" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "ctr_k" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "ctrl_butt" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-802] inferred FSM for state register 'STATE_reg' in module 'StateMachine'
+INFO: [Synth 8-5546] ROM "CONST" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "patt" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "eta3" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "endp" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dout_ctr_end" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dout_rnd_end" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "din_ctr_end" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "din_rnd_end" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pad_ctr" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pad_ctr" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "pad_ctr" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "u_rnd_end" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "u_ctr_end" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dout_ctr_end" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dout_rnd_end" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "din_ctr_end" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "din_rnd_end" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pad_ctr" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pad_ctr" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "pad_ctr" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "u_rnd_end" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "u_ctr_end" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 s_reset |                               00 |                               00
+                  s_init |                               01 |                               01
+                 s_round |                               10 |                               10
+                  s_done |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'STATE_reg' using encoding 'sequential' in module 'StateMachine'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1375.668 ; gain = 803.594
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------------------+------------+----------+
+|      |RTL Partition                |Replication |Instances |
++------+-----------------------------+------------+----------+
+|1     |cw305_reg_pmul__GB0          |           1|     43009|
+|2     |cw305_reg_pmul__GB1          |           1|     43009|
+|3     |cw305_reg_pmul__GB2          |           1|     18432|
+|4     |cw305_reg_pmul__GB3          |           1|     26616|
+|5     |cw305_reg_pmul__GB4          |           1|     28762|
+|6     |cw305_reg_pmul__GB5          |           1|     28632|
+|7     |muxpart__10_cw305_reg_pmul   |           1|      8160|
+|8     |cw305_reg_pmul__GB7          |           1|     22724|
+|9     |cw305_reg_pmul__GB8          |           1|     22852|
+|10    |cw305_reg_pmul__GB9          |           1|      9134|
+|11    |clocks__GC0                  |           1|        15|
+|12    |cw305_ecc_p256_pmul_top__GC0 |           1|     28080|
++------+-----------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3538] Detected potentially large (wide) register reg_kb_reg [G:/CW305_KYBER/src/cw305/cw305_reg_pmul.v:211]
+INFO: [Synth 8-3538] Detected potentially large (wide) register reg_k_reg [G:/CW305_KYBER/src/cw305/cw305_reg_pmul.v:210]
+INFO: [Synth 8-3538] Detected potentially large (wide) register reg_kb_crypt_reg [G:/CW305_KYBER/src/cw305/cw305_reg_pmul.v:133]
+INFO: [Synth 8-3538] Detected potentially large (wide) register reg_k_crypt_reg [G:/CW305_KYBER/src/cw305/cw305_reg_pmul.v:132]
+INFO: [Synth 8-3538] Detected potentially large (wide) register Q_buf_reg [E:/CW305_KYBER/src/kyber/RegisterFDRE.vhd:56]
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   6 Input     15 Bit       Adders := 2     
+	   5 Input     13 Bit       Adders := 2     
+	   2 Input     13 Bit       Adders := 16    
+	   3 Input     13 Bit       Adders := 8     
+	   2 Input     12 Bit       Adders := 8     
+	   3 Input     11 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 5     
+	   2 Input      7 Bit       Adders := 6     
+	   2 Input      6 Bit       Adders := 9     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 5     
+	   2 Input      3 Bit       Adders := 4     
+	   7 Input      3 Bit       Adders := 4     
+	   2 Input      2 Bit       Adders := 5     
++---XORs : 
+	   5 Input    320 Bit         XORs := 1     
+	   2 Input     64 Bit         XORs := 55    
+	   3 Input     64 Bit         XORs := 1     
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input     13 Bit         XORs := 3     
+	   2 Input      1 Bit         XORs := 6     
+	   4 Input      1 Bit         XORs := 1     
++---Registers : 
+	             6144 Bit    Registers := 4     
+	             1600 Bit    Registers := 1     
+	              256 Bit    Registers := 15    
+	               73 Bit    Registers := 3     
+	               52 Bit    Registers := 1     
+	               48 Bit    Registers := 2     
+	               32 Bit    Registers := 4     
+	               24 Bit    Registers := 13    
+	               21 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	               15 Bit    Registers := 4     
+	               13 Bit    Registers := 8     
+	               12 Bit    Registers := 25    
+	               11 Bit    Registers := 12    
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 10    
+	                7 Bit    Registers := 9     
+	                6 Bit    Registers := 11    
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 9     
+	                3 Bit    Registers := 7     
+	                2 Bit    Registers := 12    
+	                1 Bit    Registers := 70    
++---Muxes : 
+	  13 Input   6144 Bit        Muxes := 2     
+	   2 Input   6144 Bit        Muxes := 4     
+	   2 Input   1600 Bit        Muxes := 1     
+	   2 Input    256 Bit        Muxes := 7     
+	   6 Input     73 Bit        Muxes := 1     
+	   3 Input     73 Bit        Muxes := 1     
+	   2 Input     73 Bit        Muxes := 3     
+	  25 Input     64 Bit        Muxes := 1     
+	   6 Input     51 Bit        Muxes := 1     
+	   2 Input     48 Bit        Muxes := 1     
+	   2 Input     34 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 10    
+	  13 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 1     
+	  18 Input     32 Bit        Muxes := 1     
+	   4 Input     25 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 9     
+	   4 Input     24 Bit        Muxes := 2     
+	   7 Input     24 Bit        Muxes := 1     
+	   6 Input     24 Bit        Muxes := 3     
+	   5 Input     24 Bit        Muxes := 1     
+	   9 Input     24 Bit        Muxes := 1     
+	   3 Input     24 Bit        Muxes := 2     
+	  23 Input     24 Bit        Muxes := 1     
+	   2 Input     23 Bit        Muxes := 2     
+	   2 Input     22 Bit        Muxes := 2     
+	   3 Input     22 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 2     
+	  13 Input     16 Bit        Muxes := 1     
+	   6 Input     15 Bit        Muxes := 2     
+	   3 Input     13 Bit        Muxes := 4     
+	   2 Input     12 Bit        Muxes := 37    
+	   3 Input     12 Bit        Muxes := 2     
+	   4 Input     12 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 3     
+	   8 Input     10 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 6     
+	  14 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 7     
+	   5 Input      7 Bit        Muxes := 1     
+	   7 Input      7 Bit        Muxes := 1     
+	   3 Input      7 Bit        Muxes := 1     
+	   4 Input      7 Bit        Muxes := 1     
+	   6 Input      7 Bit        Muxes := 1     
+	   3 Input      6 Bit        Muxes := 2     
+	   7 Input      6 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 30    
+	   6 Input      6 Bit        Muxes := 1     
+	   5 Input      6 Bit        Muxes := 2     
+	  12 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 19    
+	  24 Input      5 Bit        Muxes := 1     
+	  21 Input      5 Bit        Muxes := 1     
+	  14 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 27    
+	   5 Input      4 Bit        Muxes := 2     
+	   3 Input      4 Bit        Muxes := 3     
+	  11 Input      3 Bit        Muxes := 1     
+	  12 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	  16 Input      3 Bit        Muxes := 2     
+	  10 Input      3 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 3     
+	  14 Input      3 Bit        Muxes := 1     
+	  13 Input      3 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 4     
+	   4 Input      2 Bit        Muxes := 14    
+	   7 Input      2 Bit        Muxes := 2     
+	  12 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 1     
+	  10 Input      2 Bit        Muxes := 2     
+	   8 Input      2 Bit        Muxes := 1     
+	   9 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 72    
+	  13 Input      1 Bit        Muxes := 6     
+	   3 Input      1 Bit        Muxes := 13    
+	   4 Input      1 Bit        Muxes := 17    
+	  11 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 3     
+	   5 Input      1 Bit        Muxes := 5     
+	  42 Input      1 Bit        Muxes := 1     
+	  12 Input      1 Bit        Muxes := 1     
+	   9 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3538] Detected potentially large (wide) register reg_kb_reg [G:/CW305_KYBER/src/cw305/cw305_reg_pmul.v:211]
+INFO: [Synth 8-3538] Detected potentially large (wide) register reg_k_reg [G:/CW305_KYBER/src/cw305/cw305_reg_pmul.v:210]
+INFO: [Synth 8-3538] Detected potentially large (wide) register reg_kb_crypt_reg [G:/CW305_KYBER/src/cw305/cw305_reg_pmul.v:133]
+INFO: [Synth 8-3538] Detected potentially large (wide) register reg_k_crypt_reg [G:/CW305_KYBER/src/cw305/cw305_reg_pmul.v:132]
+INFO: [Synth 8-3538] Detected potentially large (wide) register Q_buf_reg [E:/CW305_KYBER/src/kyber/RegisterFDRE.vhd:56]
+Hierarchical RTL Component report 
+Module cdc_pulse 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module cw305_reg_pmul 
+Detailed RTL Component Info : 
++---Registers : 
+	             6144 Bit    Registers := 4     
+	              256 Bit    Registers := 8     
+	               32 Bit    Registers := 3     
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	  13 Input   6144 Bit        Muxes := 2     
+	   2 Input   6144 Bit        Muxes := 4     
+	   2 Input    256 Bit        Muxes := 4     
+	   2 Input     32 Bit        Muxes := 4     
+	  13 Input     32 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 2     
+	  13 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 5     
+	  14 Input      8 Bit        Muxes := 1     
+	  14 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+	  13 Input      1 Bit        Muxes := 6     
+Module clocks 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+Module cw305_usb_reg_fe 
+Detailed RTL Component Info : 
++---Registers : 
+	               21 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
+Module reduc__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   6 Input     15 Bit       Adders := 1     
+	   5 Input     13 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 2     
+	   2 Input     12 Bit       Adders := 1     
+	   3 Input     11 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               15 Bit    Registers := 2     
+	               13 Bit    Registers := 2     
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 4     
+	                3 Bit    Registers := 2     
++---Muxes : 
+	   6 Input     15 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+Module reduc 
+Detailed RTL Component Info : 
++---Adders : 
+	   6 Input     15 Bit       Adders := 1     
+	   5 Input     13 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 2     
+	   2 Input     12 Bit       Adders := 1     
+	   3 Input     11 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               15 Bit    Registers := 2     
+	               13 Bit    Registers := 2     
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 4     
+	                3 Bit    Registers := 2     
++---Muxes : 
+	   6 Input     15 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+Module butterfly_Ser 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     13 Bit       Adders := 8     
+	   3 Input     13 Bit       Adders := 8     
+	   2 Input     12 Bit       Adders := 2     
++---XORs : 
+	   2 Input     13 Bit         XORs := 3     
++---Registers : 
+	               24 Bit    Registers := 1     
+	               13 Bit    Registers := 4     
+	               12 Bit    Registers := 14    
+	               11 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   3 Input     13 Bit        Muxes := 4     
+	   2 Input     12 Bit        Muxes := 25    
+	   3 Input     12 Bit        Muxes := 1     
+	   4 Input     12 Bit        Muxes := 2     
+	   5 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 2     
+Module mux4to2__1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+Module mux4to2__2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+Module mux4to2__3 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+Module mux4to2__4 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+Module mux4to2__5 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+Module mux4to2__6 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+Module mux4to2__7 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+Module mux4to2__8 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+Module mux4to2__9 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+Module mux4to2__10 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+Module mux4to2__11 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+Module mux4to2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+Module NTT_core_Server 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     13 Bit       Adders := 4     
+	   2 Input     12 Bit       Adders := 4     
+	   2 Input      8 Bit       Adders := 2     
+	   2 Input      7 Bit       Adders := 5     
+	   2 Input      6 Bit       Adders := 4     
+	   2 Input      4 Bit       Adders := 1     
+	   7 Input      3 Bit       Adders := 4     
+	   2 Input      2 Bit       Adders := 2     
++---Registers : 
+	               24 Bit    Registers := 10    
+	               12 Bit    Registers := 8     
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 6     
+	                6 Bit    Registers := 6     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input     48 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 6     
+	   4 Input     24 Bit        Muxes := 2     
+	   7 Input     24 Bit        Muxes := 1     
+	   6 Input     24 Bit        Muxes := 3     
+	   5 Input     24 Bit        Muxes := 1     
+	   9 Input     24 Bit        Muxes := 1     
+	   3 Input     24 Bit        Muxes := 1     
+	   2 Input     23 Bit        Muxes := 2     
+	   2 Input     22 Bit        Muxes := 2     
+	   2 Input     17 Bit        Muxes := 2     
+	   2 Input     12 Bit        Muxes := 10    
+	   2 Input     10 Bit        Muxes := 2     
+	   8 Input     10 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 3     
+	   5 Input      7 Bit        Muxes := 1     
+	   7 Input      7 Bit        Muxes := 1     
+	   3 Input      7 Bit        Muxes := 1     
+	   4 Input      7 Bit        Muxes := 1     
+	   3 Input      6 Bit        Muxes := 2     
+	   7 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 16    
+	   6 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 6     
+	   2 Input      4 Bit        Muxes := 7     
+	   5 Input      4 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	  14 Input      4 Bit        Muxes := 1     
+	  11 Input      3 Bit        Muxes := 1     
+	  12 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	  16 Input      3 Bit        Muxes := 2     
+	  10 Input      3 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 3     
+	  14 Input      3 Bit        Muxes := 1     
+	  13 Input      3 Bit        Muxes := 1     
+	   7 Input      2 Bit        Muxes := 2     
+	  12 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 1     
+	  10 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   8 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 13    
+	  11 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 6     
+	   6 Input      1 Bit        Muxes := 3     
+	   7 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 3     
+Module RegisterFDRE 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	             1600 Bit    Registers := 1     
++---Muxes : 
+	   2 Input   1600 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module theta 
+Detailed RTL Component Info : 
++---XORs : 
+	   5 Input    320 Bit         XORs := 1     
+	   2 Input     64 Bit         XORs := 29    
+	   3 Input     64 Bit         XORs := 1     
+Module chi 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     64 Bit         XORs := 25    
+Module iota 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     64 Bit         XORs := 1     
+Module StateMachine 
+Detailed RTL Component Info : 
++---XORs : 
+	   4 Input      1 Bit         XORs := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	  25 Input     64 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 5     
+Module decode_keccak 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               48 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+Module hash_core_Server 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               12 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   3 Input     24 Bit        Muxes := 1     
+	   3 Input     12 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+	   3 Input      1 Bit        Muxes := 2     
+Module decode_Server 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	               52 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	                7 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	  23 Input     24 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	   6 Input      7 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 4     
+	   5 Input      6 Bit        Muxes := 1     
+	  24 Input      5 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module encode_Server 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               48 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module pattern 
+Detailed RTL Component Info : 
++---Muxes : 
+	   6 Input     73 Bit        Muxes := 1     
+	   3 Input     73 Bit        Muxes := 1     
+	   6 Input     51 Bit        Muxes := 1     
+Module Kyber_Server 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
+	   2 Input      4 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	              256 Bit    Registers := 7     
+	               73 Bit    Registers := 3     
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 4     
+	                6 Bit    Registers := 3     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 19    
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 3     
+	   2 Input     73 Bit        Muxes := 3     
+	   2 Input     34 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 2     
+	  18 Input     32 Bit        Muxes := 1     
+	   4 Input     25 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	   3 Input     22 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	  12 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 14    
+	   7 Input      6 Bit        Muxes := 1     
+	   5 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 13    
+	  21 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 14    
+	   3 Input      4 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 1     
+	  10 Input      2 Bit        Muxes := 1     
+	   9 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 27    
+	   5 Input      1 Bit        Muxes := 5     
+	  42 Input      1 Bit        Muxes := 1     
+	  12 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 7     
+	   4 Input      1 Bit        Muxes := 3     
+	   9 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 1     
+Module Kyber_Wrapper 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design cw305_ecc_p256_pmul_top has unconnected port k15_sel
+WARNING: [Synth 8-3331] design cw305_ecc_p256_pmul_top has unconnected port l14_sel
+WARNING: [Synth 8-3917] design cw305_reg_pmul__GB8 has port P[8] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_reg_pmul__GB8 has port P[4] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_reg_pmul__GB8 has port P[3] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_reg_pmul__GB8 has port P[2] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_reg_pmul__GB8 has port P[1] driven by constant 0
+WARNING: [Synth 8-3917] design cw305_reg_pmul__GB8 has port P[0] driven by constant 0
+INFO: [Synth 8-5544] ROM "q_sum0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "q_sum1" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "q_diff0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "q_diff1" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5587] ROM size for "ctrl_butt" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "FSM/CONST" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "patt" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "eta3" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "endp" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "pad_ctr" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3917] design cw305_ecc_p256_pmul_top__GC0 has port reg_addrvalid driven by constant 1
+INFO: [Synth 8-3886] merging instance 'kw/ks/endp_r_reg[0]' (FDRE) to 'kw/ks/patt_r_reg[0]'
+INFO: [Synth 8-3886] merging instance 'kw/ks/eta3_r_reg[0]' (FDRE) to 'kw/ks/patt_r_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kw/ks /\patt_r_reg[0] )
+INFO: [Synth 8-3886] merging instance 'kw/ks/ntt/samp2_q_reg[3]' (FDR) to 'kw/ks/ntt/samp2_q_reg[7]'
+INFO: [Synth 8-3886] merging instance 'kw/ks/ntt/samp2_q_reg[4]' (FDR) to 'kw/ks/ntt/samp2_q_reg[7]'
+INFO: [Synth 8-3886] merging instance 'kw/ks/ntt/samp2_q_reg[5]' (FDR) to 'kw/ks/ntt/samp2_q_reg[7]'
+INFO: [Synth 8-3886] merging instance 'kw/ks/ntt/samp2_q_reg[6]' (FDR) to 'kw/ks/ntt/samp2_q_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kw/ks /ntt/\samp2_q_reg[9] )
+INFO: [Synth 8-3886] merging instance 'kw/ks/ntt/samp2_q_reg[10]' (FDR) to 'kw/ks/ntt/samp2_q_reg[11]'
+INFO: [Synth 8-3886] merging instance 'kw/ks/ntt/samp3_q_reg[3]' (FDR) to 'kw/ks/ntt/samp3_q_reg[7]'
+INFO: [Synth 8-3886] merging instance 'kw/ks/ntt/samp3_q_reg[4]' (FDR) to 'kw/ks/ntt/samp3_q_reg[7]'
+INFO: [Synth 8-3886] merging instance 'kw/ks/ntt/samp3_q_reg[5]' (FDR) to 'kw/ks/ntt/samp3_q_reg[7]'
+INFO: [Synth 8-3886] merging instance 'kw/ks/ntt/samp3_q_reg[6]' (FDR) to 'kw/ks/ntt/samp3_q_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kw/ks /ntt/\samp3_q_reg[9] )
+INFO: [Synth 8-3886] merging instance 'kw/ks/ntt/samp3_q_reg[10]' (FDR) to 'kw/ks/ntt/samp3_q_reg[11]'
+INFO: [Synth 8-3886] merging instance 'kw/ks/ntt/samp0_q_reg[3]' (FDR) to 'kw/ks/ntt/samp0_q_reg[4]'
+INFO: [Synth 8-3886] merging instance 'kw/ks/ntt/samp0_q_reg[4]' (FDR) to 'kw/ks/ntt/samp0_q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'kw/ks/ntt/samp0_q_reg[5]' (FDR) to 'kw/ks/ntt/samp0_q_reg[6]'
+INFO: [Synth 8-3886] merging instance 'kw/ks/ntt/samp0_q_reg[6]' (FDR) to 'kw/ks/ntt/samp0_q_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kw/ks /ntt/\samp0_q_reg[9] )
+INFO: [Synth 8-3886] merging instance 'kw/ks/ntt/samp0_q_reg[10]' (FDR) to 'kw/ks/ntt/samp0_q_reg[11]'
+INFO: [Synth 8-3886] merging instance 'kw/ks/ntt/samp1_q_reg[3]' (FDR) to 'kw/ks/ntt/samp1_q_reg[7]'
+INFO: [Synth 8-3886] merging instance 'kw/ks/ntt/samp1_q_reg[4]' (FDR) to 'kw/ks/ntt/samp1_q_reg[7]'
+INFO: [Synth 8-3886] merging instance 'kw/ks/ntt/samp1_q_reg[5]' (FDR) to 'kw/ks/ntt/samp1_q_reg[7]'
+INFO: [Synth 8-3886] merging instance 'kw/ks/ntt/samp1_q_reg[6]' (FDR) to 'kw/ks/ntt/samp1_q_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kw/ks /ntt/\samp1_q_reg[9] )
+INFO: [Synth 8-3886] merging instance 'kw/ks/ntt/samp1_q_reg[10]' (FDR) to 'kw/ks/ntt/samp1_q_reg[11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\kw/ks /req_pk_r1_reg)
+INFO: [Synth 8-3886] merging instance 'kw/ks/endp_r_reg[49]' (FDRE) to 'kw/ks/eta3_r_reg[53]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:20 ; elapsed = 00:01:43 . Memory (MB): peak = 1375.668 ; gain = 803.594
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------------------+------------+----------+
+|      |RTL Partition                |Replication |Instances |
++------+-----------------------------+------------+----------+
+|1     |cw305_reg_pmul__GB0          |           1|     43009|
+|2     |cw305_reg_pmul__GB1          |           1|     43009|
+|3     |cw305_reg_pmul__GB2          |           1|     18432|
+|4     |cw305_reg_pmul__GB3          |           1|     24577|
+|5     |cw305_reg_pmul__GB4          |           1|     15781|
+|6     |cw305_reg_pmul__GB5          |           1|     28632|
+|7     |muxpart__10_cw305_reg_pmul   |           1|      6145|
+|8     |cw305_reg_pmul__GB7          |           1|     10011|
+|9     |cw305_reg_pmul__GB8          |           1|     22784|
+|10    |cw305_reg_pmul__GB9          |           1|       340|
+|11    |clocks__GC0                  |           1|        15|
+|12    |cw305_ecc_p256_pmul_top__GC0 |           1|     22837|
++------+-----------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:29 ; elapsed = 00:01:55 . Memory (MB): peak = 1375.668 ; gain = 803.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[32] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[38] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[39] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[40] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[41] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[42] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[43] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[44] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[45] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[46] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[47] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[48] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[49] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[50] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[51] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[52] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[53] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[54] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[55] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[56] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[57] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[58] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[59] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[60] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[61] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[62] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[64] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[65] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[66] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[67] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[68] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[69] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[70] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[71] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[72] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[73] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[74] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[75] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[76] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[77] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[78] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[79] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[80] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[81] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[82] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[83] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[84] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[85] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[86] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[87] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[88] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[89] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[90] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[91] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[92] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_reg_pmuli_8/\reg_ry_reg[93] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:42 ; elapsed = 00:02:18 . Memory (MB): peak = 1375.668 ; gain = 803.594
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------------------+------------+----------+
+|      |RTL Partition                |Replication |Instances |
++------+-----------------------------+------------+----------+
+|1     |cw305_reg_pmul__GB0          |           1|     43009|
+|2     |cw305_reg_pmul__GB1          |           1|     43009|
+|3     |cw305_reg_pmul__GB2          |           1|     18432|
+|4     |cw305_reg_pmul__GB3          |           1|     24577|
+|5     |cw305_reg_pmul__GB4          |           1|      3758|
+|6     |cw305_reg_pmul__GB5          |           1|     20472|
+|7     |muxpart__10_cw305_reg_pmul   |           1|      6145|
+|8     |cw305_reg_pmul__GB7          |           1|      6151|
+|9     |cw305_reg_pmul__GB8          |           1|     22504|
+|10    |cw305_reg_pmul__GB9          |           1|       338|
+|11    |clocks__GC0                  |           1|        15|
+|12    |cw305_ecc_p256_pmul_top__GC0 |           1|     22835|
++------+-----------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'i_0/kw/ks/ntt/fifo1_req_r10_reg' (FD) to 'i_0/kw/ks/ofifo1_req_r1_reg'
+INFO: [Synth 8-3886] merging instance 'i_0/kw/ks/decode/req_r1_reg' (FD) to 'i_0/kw/ks/decode_req_r1_reg'
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:07 ; elapsed = 00:02:56 . Memory (MB): peak = 1376.984 ; gain = 804.910
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------------------+------------+----------+
+|      |RTL Partition                |Replication |Instances |
++------+-----------------------------+------------+----------+
+|1     |cw305_reg_pmul__GB0          |           1|     12288|
+|2     |cw305_reg_pmul__GB1          |           1|     12288|
+|3     |cw305_reg_pmul__GB2          |           1|     12288|
+|4     |cw305_reg_pmul__GB3          |           1|     15152|
+|5     |cw305_reg_pmul__GB4          |           1|      1020|
+|6     |cw305_reg_pmul__GB5          |           1|     15152|
+|7     |muxpart__10_cw305_reg_pmul   |           1|      2816|
+|8     |cw305_reg_pmul__GB7          |           1|      3081|
+|9     |cw305_reg_pmul__GB8          |           1|      6400|
+|10    |cw305_reg_pmul__GB9          |           1|       105|
+|11    |clocks__GC0                  |           1|         5|
+|12    |cw305_ecc_p256_pmul_top__GC0 |           1|     12367|
++------+-----------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'kw/ks/ntt/ctrl_butt_reg[6]' (FD) to 'kw/ks/ntt/ena_sft_reg'
+INFO: [Synth 8-5365] Flop kw/ks/ntt/dout_reg[21] is being inverted and renamed to kw/ks/ntt/dout_reg[21]_inv.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:21 ; elapsed = 00:03:13 . Memory (MB): peak = 1393.984 ; gain = 821.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:21 ; elapsed = 00:03:13 . Memory (MB): peak = 1393.984 ; gain = 821.910
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:27 ; elapsed = 00:03:18 . Memory (MB): peak = 1393.984 ; gain = 821.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:27 ; elapsed = 00:03:18 . Memory (MB): peak = 1393.984 ; gain = 821.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:15 ; elapsed = 00:04:07 . Memory (MB): peak = 1393.984 ; gain = 821.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:15 ; elapsed = 00:04:07 . Memory (MB): peak = 1393.984 ; gain = 821.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------------------+--------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name             | RTL Name                       | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------------------+--------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|cw305_ecc_p256_pmul_top | kw/ks/ntt/BU/R0/sum_r3_reg[10] | 3      | 11    | NO           | NO                 | YES               | 11     | 0       | 
+|cw305_ecc_p256_pmul_top | kw/ks/ntt/BU/R1/sum_r3_reg[10] | 3      | 11    | NO           | NO                 | YES               | 11     | 0       | 
+|cw305_ecc_p256_pmul_top | kw/ks/ntt/BU/flag_uv_r2_reg    | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|cw305_ecc_p256_pmul_top | kw/ks/sigma_reg[31]            | 8      | 32    | NO           | NO                 | YES               | 32     | 0       | 
+|cw305_ecc_p256_pmul_top | kw/ks/K_reg[31]                | 8      | 32    | NO           | NO                 | YES               | 32     | 0       | 
+|cw305_ecc_p256_pmul_top | kw/ks/hash_c_reg[31]           | 8      | 32    | NO           | NO                 | YES               | 32     | 0       | 
+|cw305_ecc_p256_pmul_top | kw/ks/rho_reg[156]             | 4      | 8     | YES          | NO                 | YES               | 8      | 0       | 
+|cw305_ecc_p256_pmul_top | kw/ks/rho_reg[62]              | 5      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|cw305_ecc_p256_pmul_top | kw/ks/rho_reg[57]              | 6      | 3     | YES          | NO                 | YES               | 3      | 0       | 
+|cw305_ecc_p256_pmul_top | kw/ks/hash_pk_reg[154]         | 4      | 6     | YES          | NO                 | YES               | 6      | 0       | 
+|cw305_ecc_p256_pmul_top | kw/ks/hash_pk_reg[115]         | 5      | 3     | YES          | NO                 | YES               | 3      | 0       | 
+|cw305_ecc_p256_pmul_top | kw/ks/hash_pk_reg[38]          | 6      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|cw305_ecc_p256_pmul_top | kw/ks/z_reg[144]               | 4      | 6     | YES          | NO                 | YES               | 6      | 0       | 
+|cw305_ecc_p256_pmul_top | kw/ks/z_reg[110]               | 5      | 6     | YES          | NO                 | YES               | 6      | 0       | 
+|cw305_ecc_p256_pmul_top | kw/ks/z_reg[84]                | 6      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|cw305_ecc_p256_pmul_top | kw/ks/z_reg[38]                | 7      | 1     | YES          | NO                 | YES               | 1      | 0       | 
++------------------------+--------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------+----------+
+|      |BlackBox name    |Instances |
++------+-----------------+----------+
+|1     |fifo_generator_2 |         1|
+|2     |fifo_generator_3 |         1|
+|3     |fifo_generator_4 |         1|
+|4     |fifo_generator_5 |         1|
+|5     |dist_mem_gen_0   |         1|
+|6     |fifo_generator_0 |         1|
+|7     |fifo_generator_1 |         1|
+|8     |fifo_generator_7 |         1|
+|9     |fifo_generator_8 |         1|
+|10    |dist_mem_gen_5   |         1|
+|11    |dist_mem_gen_6   |         1|
+|12    |dist_mem_gen_7   |         1|
+|13    |dist_mem_gen_1   |         1|
+|14    |dist_mem_gen_2   |         1|
+|15    |blk_mem_gen_0    |         1|
+|16    |blk_mem_gen_3    |         1|
+|17    |blk_mem_gen_2    |         2|
+|18    |blk_mem_gen_1    |         1|
+|19    |c_shift_ram_2    |         1|
+|20    |c_shift_ram_3    |         1|
+|21    |c_shift_ram_4    |         2|
+|22    |c_shift_ram_5    |         1|
+|23    |c_shift_ram_6    |         1|
+|24    |c_shift_ram_8    |         1|
+|25    |c_shift_ram_11   |         1|
+|26    |mult_gen_0       |         2|
+|27    |c_shift_ram_0    |         2|
+|28    |c_shift_ram_1    |         2|
+|29    |c_shift_ram_9    |         2|
++------+-----------------+----------+
+
+Report Cell Usage: 
++------+-----------------+------+
+|      |Cell             |Count |
++------+-----------------+------+
+|1     |blk_mem_gen_0    |     1|
+|2     |blk_mem_gen_1    |     1|
+|3     |blk_mem_gen_2    |     1|
+|4     |blk_mem_gen_2__2 |     1|
+|5     |blk_mem_gen_3    |     1|
+|6     |c_shift_ram_0    |     1|
+|7     |c_shift_ram_0__2 |     1|
+|8     |c_shift_ram_1    |     1|
+|9     |c_shift_ram_11   |     1|
+|10    |c_shift_ram_1__2 |     1|
+|11    |c_shift_ram_2    |     1|
+|12    |c_shift_ram_3    |     1|
+|13    |c_shift_ram_4    |     1|
+|14    |c_shift_ram_4__2 |     1|
+|15    |c_shift_ram_5    |     1|
+|16    |c_shift_ram_6    |     1|
+|17    |c_shift_ram_8    |     1|
+|18    |c_shift_ram_9    |     1|
+|19    |c_shift_ram_9__2 |     1|
+|20    |dist_mem_gen_0   |     1|
+|21    |dist_mem_gen_1   |     1|
+|22    |dist_mem_gen_2   |     1|
+|23    |dist_mem_gen_5   |     1|
+|24    |dist_mem_gen_6   |     1|
+|25    |dist_mem_gen_7   |     1|
+|26    |fifo_generator_0 |     1|
+|27    |fifo_generator_1 |     1|
+|28    |fifo_generator_2 |     1|
+|29    |fifo_generator_3 |     1|
+|30    |fifo_generator_4 |     1|
+|31    |fifo_generator_5 |     1|
+|32    |fifo_generator_7 |     1|
+|33    |fifo_generator_8 |     1|
+|34    |mult_gen_0       |     1|
+|35    |mult_gen_0__2    |     1|
+|36    |BUFG             |     1|
+|37    |BUFGMUX_CTRL     |     1|
+|38    |CARRY4           |   161|
+|39    |LUT1             | 12161|
+|40    |LUT2             |   416|
+|41    |LUT3             |  2355|
+|42    |LUT4             |  1149|
+|43    |LUT5             | 14906|
+|44    |LUT6             | 25892|
+|45    |MUXF7            |  2586|
+|46    |MUXF8            |  1202|
+|47    |ODDR             |     1|
+|48    |SRL16E           |   157|
+|49    |USR_ACCESSE2     |     1|
+|50    |FDCE             |    82|
+|51    |FDPE             |     2|
+|52    |FDRE             | 30286|
+|53    |FDSE             |   338|
+|54    |IBUF             |    30|
+|55    |IBUFG            |     1|
+|56    |IOBUF            |     8|
+|57    |OBUF             |     5|
++------+-----------------+------+
+
+Report Instance Areas: 
++------+------------------------+-----------------+------+
+|      |Instance                |Module           |Cells |
++------+------------------------+-----------------+------+
+|1     |top                     |                 | 92428|
+|2     |  U_clocks              |clocks           |     4|
+|3     |  U_reg_pmul            |cw305_reg_pmul   | 47408|
+|4     |    U_go_pulse          |cdc_pulse        |    13|
+|5     |  U_usb_reg_fe          |cw305_usb_reg_fe | 32928|
+|6     |  kw                    |Kyber_Wrapper    | 11971|
+|7     |    ks                  |Kyber_Server     | 11867|
+|8     |      decode            |decode_Server    |   398|
+|9     |      encode            |encode_Server    |    13|
+|10    |      hash              |hash_core_Server |  6089|
+|11    |        decode          |decode_keccak    |   201|
+|12    |        hash            |Keccak1600       |  5371|
+|13    |          FSM           |StateMachine     |    89|
+|14    |          RoundFunction |Round            |  5282|
+|15    |            Reg         |RegisterFDRE     |  3362|
+|16    |            T           |theta            |  1920|
+|17    |      ntt               |NTT_core_Server  |  3316|
+|18    |        BU              |butterfly_Ser    |  1445|
+|19    |          R0            |reduc            |   285|
+|20    |          R1            |reduc_0          |   276|
++------+------------------------+-----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:15 ; elapsed = 00:04:07 . Memory (MB): peak = 1393.984 ; gain = 821.910
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:57 ; elapsed = 00:03:56 . Memory (MB): peak = 1393.984 ; gain = 390.543
+Synthesis Optimization Complete : Time (s): cpu = 00:03:15 ; elapsed = 00:04:08 . Memory (MB): peak = 1393.984 ; gain = 821.910
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.884 . Memory (MB): peak = 1393.984 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 3960 Unisim elements for replacement
+WARNING: [Netlist 29-432] The IBUFG primitive 'U_clocks/clkibuf' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1403.520 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 10 instances were transformed.
+  BUFGMUX_CTRL => BUFGCTRL (inverted pins: S0): 1 instance 
+  IBUFG => IBUF: 1 instance 
+  IOBUF => IOBUF (IBUF, OBUFT): 8 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+345 Infos, 36 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:03:30 ; elapsed = 00:04:24 . Memory (MB): peak = 1403.520 ; gain = 1105.645
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1403.520 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/synth_1/cw305_ecc_p256_pmul_top.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1403.520 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file cw305_ecc_p256_pmul_top_utilization_synth.rpt -pb cw305_ecc_p256_pmul_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 13 20:49:24 2023...

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sun Oct  8 09:30:10 2023
+# Process ID: 6816
+# Current directory: G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/fifo_generator_8_synth_1
+# Command line: vivado.exe -log fifo_generator_8.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fifo_generator_8.tcl
+# Log file: G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/fifo_generator_8_synth_1/fifo_generator_8.vds
+# Journal file: G:/CW305_KYBER/cw305_kyber/cw305_kyber.runs/fifo_generator_8_synth_1\vivado.jou
+#-----------------------------------------------------------
+source fifo_generator_8.tcl -notrace

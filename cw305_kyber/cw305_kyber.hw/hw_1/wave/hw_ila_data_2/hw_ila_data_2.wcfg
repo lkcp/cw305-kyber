@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<wave_config>
+	<wave_state>
+	</wave_state>
+	<db_ref_list>
+		<db_ref path="G:/CW305_KYBER/cw305_kyber/cw305_kyber.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wdb" id="1" type="auto">
+			<top_modules>
+				<top_module name="top">
+				</top_module>
+			</top_modules>
+		</db_ref>
+	</db_ref_list>
+	<WVObjectSize size="1">
+	</WVObjectSize>
+	<wvobject fp_name="U_reg_pmul/reg_crypt_go_pulse" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">U_reg_pmul/reg_crypt_go_pulse</obj_property>
+		<obj_property name="ObjectShortName">reg_crypt_go_pulse</obj_property>
+		<obj_property name="DisplayName">FullPathName</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+</wave_config>
+

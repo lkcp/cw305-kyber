@@ -1,0 +1,43 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../cw305_kyber.srcs/sources_1/ip/dist_mem_gen_0/sim/dist_mem_gen_0.v" \
+"../../../../cw305_kyber.srcs/sources_1/ip/fifo_generator_5/sim/fifo_generator_5.v" \
+"../../../../cw305_kyber.srcs/sources_1/ip/fifo_generator_4/sim/fifo_generator_4.v" \
+"../../../../cw305_kyber.srcs/sources_1/ip/fifo_generator_3/sim/fifo_generator_3.v" \
+"../../../../cw305_kyber.srcs/sources_1/ip/fifo_generator_2/sim/fifo_generator_2.v" \
+"../../../../cw305_kyber.srcs/sources_1/ip/fifo_generator_8/sim/fifo_generator_8.v" \
+"../../../../cw305_kyber.srcs/sources_1/ip/fifo_generator_7/sim/fifo_generator_7.v" \
+"../../../../cw305_kyber.srcs/sources_1/ip/fifo_generator_1/sim/fifo_generator_1.v" \
+"../../../../cw305_kyber.srcs/sources_1/ip/fifo_generator_0/sim/fifo_generator_0.v" \
+"../../../../cw305_kyber.srcs/sources_1/ip/blk_mem_gen_1/sim/blk_mem_gen_1.v" \
+"../../../../cw305_kyber.srcs/sources_1/ip/blk_mem_gen_2/sim/blk_mem_gen_2.v" \
+"../../../../cw305_kyber.srcs/sources_1/ip/blk_mem_gen_3/sim/blk_mem_gen_3.v" \
+"../../../../cw305_kyber.srcs/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v" \
+"../../../../cw305_kyber.srcs/sources_1/ip/dist_mem_gen_2/sim/dist_mem_gen_2.v" \
+"../../../../cw305_kyber.srcs/sources_1/ip/dist_mem_gen_1/sim/dist_mem_gen_1.v" \
+"../../../../cw305_kyber.srcs/sources_1/ip/dist_mem_gen_7/sim/dist_mem_gen_7.v" \
+"../../../../cw305_kyber.srcs/sources_1/ip/dist_mem_gen_6/sim/dist_mem_gen_6.v" \
+"../../../../cw305_kyber.srcs/sources_1/ip/dist_mem_gen_5/sim/dist_mem_gen_5.v" \
+"E:/CW305_KYBER/src/kyber/Kyber_Server.v" \
+"E:/CW305_KYBER/src/kyber/NTT_core_Server.v" \
+"E:/CW305_KYBER/src/kyber/butterfly_Server.v" \
+"../../../../../src/cw305/cdc_pulse.v" \
+"../../../../../src/cw305/clocks.v" \
+"../../../../../src/cw305/cw305_ecc_p256_pmul_top.v" \
+"../../../../../src/cw305/cw305_reg_pmul.v" \
+"../../../../../src/cw305/cw305_usb_reg_fe.v" \
+"E:/CW305_KYBER/src/kyber/decode_Server.v" \
+"E:/CW305_KYBER/src/kyber/decode_keccak.v" \
+"E:/CW305_KYBER/src/kyber/encode_Server.v" \
+"E:/CW305_KYBER/src/kyber/hash_core_Server.v" \
+"../../../../../src/kyber/kyber_Wrapper.v" \
+"E:/CW305_KYBER/src/kyber/mux4to2.v" \
+"E:/CW305_KYBER/src/kyber/pattern.v" \
+"E:/CW305_KYBER/src/kyber/reduc.v" \
+"../../../../../src/tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,493 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Fri Oct 13 21:16:47 2023
+| Host         : DESKTOP-QBOHV2U running 64-bit major release  (build 9200)
+| Command      : report_methodology -file cw305_ecc_p256_pmul_top_methodology_drc_routed.rpt -pb cw305_ecc_p256_pmul_top_methodology_drc_routed.pb -rpx cw305_ecc_p256_pmul_top_methodology_drc_routed.rpx
+| Design       : cw305_ecc_p256_pmul_top
+| Device       : xc7a100tftg256-2
+| Speed File   : -2
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 71
++-----------+------------------+-------------------------------------------------+------------+
+| Rule      | Severity         | Description                                     | Violations |
++-----------+------------------+-------------------------------------------------+------------+
+| TIMING-6  | Critical Warning | No common primary clock between related clocks  | 2          |
+| TIMING-7  | Critical Warning | No common node between related clocks           | 2          |
+| LUTAR-1   | Warning          | LUT drives async reset alert                    | 5          |
+| PDRC-190  | Warning          | Suboptimally placed synchronized register chain | 10         |
+| TIMING-18 | Warning          | Missing input or output delay                   | 3          |
+| XDCH-2    | Warning          | Same min and max delay values on IO port        | 49         |
++-----------+------------------+-------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-6#1 Critical Warning
+No common primary clock between related clocks  
+The clocks tio_clkin and usb_clk are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks tio_clkin] -to [get_clocks usb_clk]
+Related violations: <none>
+
+TIMING-6#2 Critical Warning
+No common primary clock between related clocks  
+The clocks usb_clk and tio_clkin are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks usb_clk] -to [get_clocks tio_clkin]
+Related violations: <none>
+
+TIMING-7#1 Critical Warning
+No common node between related clocks  
+The clocks tio_clkin and usb_clk are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks tio_clkin] -to [get_clocks usb_clk]
+Related violations: <none>
+
+TIMING-7#2 Critical Warning
+No common node between related clocks  
+The clocks usb_clk and tio_clkin are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks usb_clk] -to [get_clocks tio_clkin]
+Related violations: <none>
+
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell U_reg_pmul/U_go_pulse/state[5]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) kw/count_reg[0]/CLR, kw/count_reg[0]_rep/CLR, kw/count_reg[0]_rep__0/CLR, kw/count_reg[0]_rep__1/CLR, kw/count_reg[0]_rep__10/CLR, kw/count_reg[0]_rep__11/CLR, kw/count_reg[0]_rep__2/CLR, kw/count_reg[0]_rep__3/CLR, kw/count_reg[0]_rep__4/CLR, kw/count_reg[0]_rep__5/CLR, kw/count_reg[0]_rep__6/CLR, kw/count_reg[0]_rep__7/CLR, kw/count_reg[0]_rep__8/CLR, kw/count_reg[0]_rep__9/CLR, kw/count_reg[1]/CLR (the first 15 of 84 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst/ngwrdrst.grst.g7serrst.rd_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[0]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst/ngwrdrst.grst.g7serrst.wr_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[0]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[1]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#4 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst/ngwrdrst.grst.g7serrst.rd_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[0]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#5 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst/ngwrdrst.grst.g7serrst.wr_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[0]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[1]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+PDRC-190#1 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[0] in site SLICE_X20Y31 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#2 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[1] in site SLICE_X19Y30 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#3 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[2] in site SLICE_X18Y32 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#4 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[3] in site SLICE_X17Y30 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#5 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[0] in site SLICE_X16Y31 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#6 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[1] in site SLICE_X13Y30 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#7 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[2] in site SLICE_X15Y30 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#8 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] in site SLICE_X14Y33 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#9 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[1] in site SLICE_X15Y32 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#10 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[2] in site SLICE_X13Y32 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on k16_sel relative to clock(s) tio_clkin
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on pushbutton relative to clock(s) tio_clkin
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An input delay is missing on usb_trigger relative to clock(s) tio_clkin
+Related violations: <none>
+
+XDCH-2#1 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'j16_sel' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 0.000 [get_ports j16_sel]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 91)
+Related violations: <none>
+
+XDCH-2#2 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'k16_sel' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 0.000 [get_ports k16_sel]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 92)
+Related violations: <none>
+
+XDCH-2#3 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.500 ns has been defined on port 'pushbutton' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks usb_clk] -add_delay 0.500 [get_ports pushbutton]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 93)
+Related violations: <none>
+
+XDCH-2#4 Warning
+Same min and max delay values on IO port  
+The same input delay of 2.000 ns has been defined on port 'usb_addr[0]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 84)
+Related violations: <none>
+
+XDCH-2#5 Warning
+Same min and max delay values on IO port  
+The same input delay of 2.000 ns has been defined on port 'usb_addr[10]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 84)
+Related violations: <none>
+
+XDCH-2#6 Warning
+Same min and max delay values on IO port  
+The same input delay of 2.000 ns has been defined on port 'usb_addr[11]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 84)
+Related violations: <none>
+
+XDCH-2#7 Warning
+Same min and max delay values on IO port  
+The same input delay of 2.000 ns has been defined on port 'usb_addr[12]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 84)
+Related violations: <none>
+
+XDCH-2#8 Warning
+Same min and max delay values on IO port  
+The same input delay of 2.000 ns has been defined on port 'usb_addr[13]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 84)
+Related violations: <none>
+
+XDCH-2#9 Warning
+Same min and max delay values on IO port  
+The same input delay of 2.000 ns has been defined on port 'usb_addr[14]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 84)
+Related violations: <none>
+
+XDCH-2#10 Warning
+Same min and max delay values on IO port  
+The same input delay of 2.000 ns has been defined on port 'usb_addr[15]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 84)
+Related violations: <none>
+
+XDCH-2#11 Warning
+Same min and max delay values on IO port  
+The same input delay of 2.000 ns has been defined on port 'usb_addr[16]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 84)
+Related violations: <none>
+
+XDCH-2#12 Warning
+Same min and max delay values on IO port  
+The same input delay of 2.000 ns has been defined on port 'usb_addr[17]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 84)
+Related violations: <none>
+
+XDCH-2#13 Warning
+Same min and max delay values on IO port  
+The same input delay of 2.000 ns has been defined on port 'usb_addr[18]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 84)
+Related violations: <none>
+
+XDCH-2#14 Warning
+Same min and max delay values on IO port  
+The same input delay of 2.000 ns has been defined on port 'usb_addr[19]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 84)
+Related violations: <none>
+
+XDCH-2#15 Warning
+Same min and max delay values on IO port  
+The same input delay of 2.000 ns has been defined on port 'usb_addr[1]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 84)
+Related violations: <none>
+
+XDCH-2#16 Warning
+Same min and max delay values on IO port  
+The same input delay of 2.000 ns has been defined on port 'usb_addr[20]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 84)
+Related violations: <none>
+
+XDCH-2#17 Warning
+Same min and max delay values on IO port  
+The same input delay of 2.000 ns has been defined on port 'usb_addr[2]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 84)
+Related violations: <none>
+
+XDCH-2#18 Warning
+Same min and max delay values on IO port  
+The same input delay of 2.000 ns has been defined on port 'usb_addr[3]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 84)
+Related violations: <none>
+
+XDCH-2#19 Warning
+Same min and max delay values on IO port  
+The same input delay of 2.000 ns has been defined on port 'usb_addr[4]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 84)
+Related violations: <none>
+
+XDCH-2#20 Warning
+Same min and max delay values on IO port  
+The same input delay of 2.000 ns has been defined on port 'usb_addr[5]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 84)
+Related violations: <none>
+
+XDCH-2#21 Warning
+Same min and max delay values on IO port  
+The same input delay of 2.000 ns has been defined on port 'usb_addr[6]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 84)
+Related violations: <none>
+
+XDCH-2#22 Warning
+Same min and max delay values on IO port  
+The same input delay of 2.000 ns has been defined on port 'usb_addr[7]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 84)
+Related violations: <none>
+
+XDCH-2#23 Warning
+Same min and max delay values on IO port  
+The same input delay of 2.000 ns has been defined on port 'usb_addr[8]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 84)
+Related violations: <none>
+
+XDCH-2#24 Warning
+Same min and max delay values on IO port  
+The same input delay of 2.000 ns has been defined on port 'usb_addr[9]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_addr]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 84)
+Related violations: <none>
+
+XDCH-2#25 Warning
+Same min and max delay values on IO port  
+The same input delay of 2.000 ns has been defined on port 'usb_cen' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_cen]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 87)
+Related violations: <none>
+
+XDCH-2#26 Warning
+Same min and max delay values on IO port  
+The same input delay of 2.000 ns has been defined on port 'usb_data[0]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_data]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 85)
+Related violations: <none>
+
+XDCH-2#27 Warning
+Same min and max delay values on IO port  
+The same input delay of 2.000 ns has been defined on port 'usb_data[1]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_data]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 85)
+Related violations: <none>
+
+XDCH-2#28 Warning
+Same min and max delay values on IO port  
+The same input delay of 2.000 ns has been defined on port 'usb_data[2]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_data]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 85)
+Related violations: <none>
+
+XDCH-2#29 Warning
+Same min and max delay values on IO port  
+The same input delay of 2.000 ns has been defined on port 'usb_data[3]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_data]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 85)
+Related violations: <none>
+
+XDCH-2#30 Warning
+Same min and max delay values on IO port  
+The same input delay of 2.000 ns has been defined on port 'usb_data[4]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_data]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 85)
+Related violations: <none>
+
+XDCH-2#31 Warning
+Same min and max delay values on IO port  
+The same input delay of 2.000 ns has been defined on port 'usb_data[5]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_data]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 85)
+Related violations: <none>
+
+XDCH-2#32 Warning
+Same min and max delay values on IO port  
+The same input delay of 2.000 ns has been defined on port 'usb_data[6]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_data]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 85)
+Related violations: <none>
+
+XDCH-2#33 Warning
+Same min and max delay values on IO port  
+The same input delay of 2.000 ns has been defined on port 'usb_data[7]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_data]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 85)
+Related violations: <none>
+
+XDCH-2#34 Warning
+Same min and max delay values on IO port  
+The same input delay of 2.000 ns has been defined on port 'usb_rdn' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_rdn]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 88)
+Related violations: <none>
+
+XDCH-2#35 Warning
+Same min and max delay values on IO port  
+The same input delay of 2.000 ns has been defined on port 'usb_trigger' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_trigger]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 86)
+Related violations: <none>
+
+XDCH-2#36 Warning
+Same min and max delay values on IO port  
+The same input delay of 2.000 ns has been defined on port 'usb_wrn' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock usb_clk -add_delay 2.000 [get_ports usb_wrn]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 89)
+Related violations: <none>
+
+XDCH-2#37 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'led1' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock usb_clk 0.000 [get_ports led1]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 95)
+Related violations: <none>
+
+XDCH-2#38 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'led2' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock usb_clk 0.000 [get_ports led2]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 96)
+Related violations: <none>
+
+XDCH-2#39 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'led3' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock usb_clk 0.000 [get_ports led3]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 97)
+Related violations: <none>
+
+XDCH-2#40 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'tio_clkout' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock usb_clk 0.000 [get_ports tio_clkout]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 100)
+Related violations: <none>
+
+XDCH-2#41 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'tio_trigger' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock usb_clk 0.000 [get_ports tio_trigger]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 99)
+Related violations: <none>
+
+XDCH-2#42 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'usb_data[0]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock usb_clk 0.000 [get_ports usb_data]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 98)
+Related violations: <none>
+
+XDCH-2#43 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'usb_data[1]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock usb_clk 0.000 [get_ports usb_data]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 98)
+Related violations: <none>
+
+XDCH-2#44 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'usb_data[2]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock usb_clk 0.000 [get_ports usb_data]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 98)
+Related violations: <none>
+
+XDCH-2#45 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'usb_data[3]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock usb_clk 0.000 [get_ports usb_data]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 98)
+Related violations: <none>
+
+XDCH-2#46 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'usb_data[4]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock usb_clk 0.000 [get_ports usb_data]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 98)
+Related violations: <none>
+
+XDCH-2#47 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'usb_data[5]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock usb_clk 0.000 [get_ports usb_data]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 98)
+Related violations: <none>
+
+XDCH-2#48 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'usb_data[6]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock usb_clk 0.000 [get_ports usb_data]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 98)
+Related violations: <none>
+
+XDCH-2#49 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'usb_data[7]' relative to clock usb_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock usb_clk 0.000 [get_ports usb_data]
+G:/CW305_KYBER/src/cw305/cw305_main.xdc (Line: 98)
+Related violations: <none>
+
+
